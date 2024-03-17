@@ -21,7 +21,9 @@ import RootLayout from './layout/RootLayout'
 import HelpLayout from './layout/HelpLayout'
 import NotFound from './pages/NotFound'
 import CareersLaouy from './layout/CareersLaouy'
-import Careers from './pages/Carreers/Careers'
+
+import Qqlayout from './layout/Qqlayout'
+import Careers, { careersLoader } from './pages/Carreers/Careers'
 
 const router = createHashRouter(
   createRoutesFromElements(
@@ -34,8 +36,15 @@ const router = createHashRouter(
         <Route path='contact' element={<Contact />} />
       </Route>
 
-      <Route path='carrers' element={<CareersLaouy />}>
-        <Route index element={<Careers />} />
+      <Route path='qq' element={<Qqlayout />} >
+
+      </Route>
+      <Route path='careers' element={<CareersLaouy />}>
+        <Route
+          index
+          element={<Careers />}
+          loader={careersLoader}
+        />
       </Route>
 
       <Route path='*' element={<NotFound />} />
