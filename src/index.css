@@ -3,16 +3,18 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-
+  
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #0091f2;
-
+  
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  
+  --primary:#00ba70
 }
 
 a {
@@ -49,8 +51,14 @@ header nav h2{
 }
 
 header nav a.active{
-  background-color: #00ba70;
+  background-color: var(--primary);
 }
+
+
+main{
+  
+}
+
 
 button {
   border-radius: 8px;
@@ -82,4 +90,61 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+
+.help-layout{
+  margin: 1rem 0;
+}
+
+.help-layout nav{
+  display: flex;
+  justify-content: center;
+  gap:55px;
+  margin: 1rem 0;
+}
+
+.help-layout nav a.active{
+  background-color: var(--primary);
+}
+
+/*--------------------------faq-----------------*/
+.faq{
+  border: 2px solid rgb(91, 91, 91);
+  background-color:  rgb(91, 91, 91);
+  border-radius: 10px;
+}
+
+.faq h2{
+  text-align: center;
+
+  /* background-color: #646cff; */
+}
+
+
+.faq .question{
+  background-color: chocolate;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 1rem;
+
+}
+
+/*------------------contact----------------------*/
+.contact{
+  text-align: center;
+  border: 2px solid rgb(91, 91, 91);
+  background-color:  rgb(91, 91, 91);
+  border-radius: 10px;
+}
+
+.contact form{
+  display: flex;
+  flex-direction: column;
+
+  background-color: chocolate;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 1rem;
+
 }
